@@ -1,18 +1,15 @@
 import java.util.*;
 
-public class OrderQueue extends InventoryCheck {
-    public InventoryCheck inven = new InventoryCheck();
-    public Hashtable<String, String> order = new Hashtable<String, String>();
-    public String drink;
-    public String name;
-    public Queue<Hashtable> queue = new LinkedList<Hashtable>();
+public class OrderQueue extends AutoDrinkCheck {
+    // public InventoryCheck inven = new InventoryCheck();
+    // public Hashtable<String, String> order = new Hashtable<String, String>();
+    // public String drink;
+    // public String name;
+    // public Queue<Hashtable> queue = new LinkedList<Hashtable>();
 
     public static void main(String[] args) {
-        InventoryCheck inven = new InventoryCheck();
-        inven.AlcoholList();
-        inven.MixerList();
-        inven.JuiceList();
-        inven.MixedDrink();
+        AutoDrinkCheck check = new AutoDrinkCheck();
+        check.AvailableDrinkType();
 
         Hashtable<String, String> order = new Hashtable<String, String>();
         String name;
@@ -29,7 +26,8 @@ public class OrderQueue extends InventoryCheck {
         System.out.println("Sending to queue");
         order.put(name, drink);
         queue.add(order);
-        System.out.println("Current queue: " + queue + inven.drink.get(drink));
+        System.out.println();
+        System.out.println("Current queue: " + queue + check.drink.get(drink));// .drink.get(drink));
         System.out.println();
 
         queue.remove();
