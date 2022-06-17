@@ -145,3 +145,6 @@ a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
+  .input-name {
+    justify-items: center;
+  }
