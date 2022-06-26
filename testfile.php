@@ -17,6 +17,7 @@
                 <div class="meat"></div>
                 <div class="bottom"></div>
                 </label>
+        
                 <nav class="menu1">
                 <a class="link1" href="">Name</a>
                 <a class="link1" href="">Past orders</a>
@@ -26,13 +27,16 @@
             </section>
             <hr>
         </div>
-        <div class="menu">
-            <div class="drink">
-                <img src="nulled_img.png" alt="nulled_img.svg" class="drinkIMG">
-                <h2>Holding name</h2>
-                <p>Holding discription</p>
-            </div>
+        <div class="input-name">
+            <section class="name-input"> <label for="fname">Full name:</label> 
+            <input type="text" id="fname" name="fname"> </section>
+            <input type="submit" value="Login" onclick="lsRememberMe()">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
         </div>
+        <?php
+            echo "test";
+            setcookie("cid",$id,time()+60*60);
+        ?>
     </div>
     </body>
 </html>

@@ -1,17 +1,30 @@
 body {
-    background-color: honeydew;
+    background-color: #CEE8DE;
 }
 h1 {
     text-align: center;
 }
-.dropbtn {
-    height: 45px;
-    margin: 10px;
-    display:-ms-grid;
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
-    justify-items: center;
-    z-index: 120;
+.logo {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu ';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 .Projects {
     margin: auto;
@@ -36,7 +49,7 @@ a {
   }
   
   .p-menu1{
-     height: 100%;
+     height: 25%;
   }
   /* Hamburger */
   .hamburger1 {
@@ -45,7 +58,7 @@ a {
     display: -ms-grid;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    justify-items: right;
     z-index: 120;
   }
   
@@ -81,23 +94,24 @@ a {
   }
   
   #toggle1:checked ~ .menu1 {
-    height: 340px;
+    height: 170px;
   }
   
   
   /* Menu */
   .menu1 {
-    width: 100%;
-    background-color: #02173F;
+    border-width: 2px;
+    border-radius: 4px;
+    float:right;
+    width: 20%;
+    background-color: #96A8A1;
     margin: 0;
     display: -ms-grid;
     display: grid;
     grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 25px;
     padding: 0;
     list-style: none;
     clear: both;
-    width: auto;
     text-align: center;
     height: 0px;
     overflow: hidden;
@@ -108,15 +122,18 @@ a {
   }
   
   .menu1 a:first-child {
-    margin-top: 40px;
+    margin-top: 20px;
   }
-  
   .menu1 a:last-child {
-    margin-bottom: 40px;
+      margin-bottom: 20px;
   }
-  
+  .drinkIMG {
+     width: 15%;
+  }
   .link1 {
-    width: 60%;
+    text-align: center;
+    align-content: center;
+    width: 100%;
     margin: 0;
     padding: 10px 0;
     font: 700 20px 'Oswald', sans-serif;
@@ -127,4 +144,7 @@ a {
     color: rgb(61, 61, 61);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .input-name {
+    justify-items: center;
   }
